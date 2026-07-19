@@ -17,8 +17,6 @@
   --space-2: 1rem;
   --space-3: 1.5rem;
   --space-4: 2rem;
-  --space-5: 3rem;
-  --space-6: 4rem;
   --radius: 0.75rem;
   --radius-lg: 1rem;
   --shadow-card: 0 12px 28px rgba(2, 6, 23, 0.2);
@@ -695,6 +693,18 @@ section {
   margin-block-end: var(--space-2);
 }
 
+.ecosystem__eyebrow,
+.prototype-journey__eyebrow,
+.vision__eyebrow,
+.cta__eyebrow {
+  color: var(--color-primary);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-block-end: var(--space-2);
+  text-transform: uppercase;
+}
+
 .problem-solution__grid {
   align-items: stretch;
   display: grid;
@@ -753,15 +763,6 @@ section {
 .ecosystem__intro {
   margin-block-end: clamp(2.5rem, 6vw, 4rem);
   max-width: 48rem;
-}
-
-.ecosystem__eyebrow {
-  color: var(--color-primary);
-  font-size: 0.8125rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  margin-block-end: var(--space-2);
-  text-transform: uppercase;
 }
 
 .ecosystem__intro > p:last-child {
@@ -931,15 +932,6 @@ section {
   max-width: 48rem;
 }
 
-.prototype-journey__eyebrow {
-  color: var(--color-primary);
-  font-size: 0.8125rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  margin-block-end: var(--space-2);
-  text-transform: uppercase;
-}
-
 .prototype-journey__intro > p:last-child {
   font-size: clamp(1rem, 1.5vw, 1.125rem);
   max-width: 45rem;
@@ -1027,15 +1019,6 @@ section {
   max-width: 50rem;
 }
 
-.vision__eyebrow {
-  color: var(--color-primary);
-  font-size: 0.8125rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  margin-block-end: var(--space-2);
-  text-transform: uppercase;
-}
-
 .vision__intro > p:last-child {
   font-size: clamp(1rem, 1.5vw, 1.125rem);
   max-width: 46rem;
@@ -1100,15 +1083,6 @@ section {
 
 .cta__content {
   max-width: 48rem;
-}
-
-.cta__eyebrow {
-  color: var(--color-primary);
-  font-size: 0.8125rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  margin-block-end: var(--space-2);
-  text-transform: uppercase;
 }
 
 .cta h2 {

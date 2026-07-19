@@ -1,7 +1,7 @@
 const navigation = document.querySelector('.site-nav');
 const menuToggle = document.querySelector('.nav-toggle');
 const navigationLinks = [...document.querySelectorAll('[data-nav-link]')];
-const mobileMenuLinks = [...document.querySelectorAll('.nav-menu a')];
+const menuLinks = [...document.querySelectorAll('.nav-menu a')];
 
 if (navigation && menuToggle && navigationLinks.length) {
   const closeMenu = () => {
@@ -26,16 +26,21 @@ if (navigation && menuToggle && navigationLinks.length) {
     menuToggle.setAttribute('aria-expanded', String(isOpen));
   });
 
-  mobileMenuLinks.forEach((link) => {
+  menuLinks.forEach((link) => {
     link.addEventListener('click', () => {
+      if (link.hasAttribute('data-nav-link')) {
+        setActiveLink(link.getAttribute('href').slice(1));
+      }
+
       closeMenu();
     });
   });
 
-  navigationLinks.forEach((link) => {
-    link.addEventListener('click', () => {
-      setActiveLink(link.getAttribute('href').slice(1));
-    });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && navigation.classList.contains('is-menu-open')) {
+      closeMenu();
+      menuToggle.focus();
+    }
   });
 
   const linkedSections = navigationLinks

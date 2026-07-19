@@ -36,12 +36,56 @@
 
   <main>
     <!-- Hero -->
-    <section id="hero" aria-labelledby="hero-title">
-      <p>Portable ECG. Connected care.</p>
-      <h1 id="hero-title">Connected Cardiac Care, Anywhere.</h1>
-      <p>Heart-O-Care combines portable ECG hardware, mobile technology, and intelligent software into one connected platform for better cardiac monitoring.</p>
-      <a href="#solution">Explore Heart-O-Care</a>
-      <a href="#prototype-journey">Our Journey</a>
+    <section id="hero" class="hero" aria-labelledby="hero-title">
+      <div class="container hero__layout">
+        <div class="hero__copy">
+          <p class="hero__eyebrow">Portable ECG. Connected care.</p>
+          <h1 id="hero-title">Connected Cardiac Care,<br>Anywhere.</h1>
+          <p class="hero__description">Heart-O-Care combines portable ECG hardware, Bluetooth connectivity, mobile technology, and intelligent software into one connected platform for modern cardiac monitoring.</p>
+          <div class="hero__actions" aria-label="Hero actions">
+            <a class="button--primary" href="#solution">Explore Heart-O-Care</a>
+            <a class="button--secondary" href="#prototype-journey">Our Journey</a>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <figure class="platform-diagram" aria-labelledby="platform-diagram-caption">
+            <div class="platform-node platform-node--ecg">
+              <span class="platform-node__illustration platform-node__illustration--ecg" aria-hidden="true"></span>
+              <p>Portable ECG Device</p>
+            </div>
+            <div class="platform-node platform-node--mobile">
+              <span class="platform-node__illustration platform-node__illustration--mobile" aria-hidden="true"></span>
+              <p>Mobile App</p>
+            </div>
+            <div class="platform-node platform-node--desktop">
+              <span class="platform-node__illustration platform-node__illustration--desktop" aria-hidden="true"></span>
+              <p>Desktop Software</p>
+            </div>
+            <span class="platform-connector platform-connector--ecg-mobile" aria-hidden="true"></span>
+            <span class="platform-connector platform-connector--ecg-desktop" aria-hidden="true"></span>
+            <span class="platform-connector platform-connector--mobile-desktop" aria-hidden="true"></span>
+            <figcaption id="platform-diagram-caption" class="sr-only">A connected Heart-O-Care platform linking a portable ECG device, mobile app, and desktop software.</figcaption>
+          </figure>
+          <aside class="hero-info-card hero-info-card--signal" aria-label="Portable monitoring information">
+            <span>Portable monitoring</span>
+            <strong>ECG at the point of need</strong>
+          </aside>
+          <aside class="hero-info-card hero-info-card--connection" aria-label="Bluetooth connection information">
+            <span>Bluetooth connection</span>
+            <strong>Device to mobile workflow</strong>
+          </aside>
+        </div>
+      </div>
+
+      <aside class="hero-trust container" aria-label="Heart-O-Care platform capabilities">
+        <ul>
+          <li>Portable ECG</li>
+          <li>Bluetooth Connectivity</li>
+          <li>Desktop Software</li>
+          <li>Future AI Platform</li>
+        </ul>
+      </aside>
     </section>
 
     <!-- Problem and Solution -->

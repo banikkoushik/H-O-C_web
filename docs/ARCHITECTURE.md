@@ -3,14 +3,14 @@
 ## Structure
 
 - `index.html` is the Version 1.0 landing page.
-- `pages/` holds dedicated product and future feature pages.
+- `pages/` holds dedicated product pages and reserved future routes.
 - `assets/css/style.css` is the single global stylesheet.
-- `assets/js/script.js` contains shared navigation behavior.
-- `assets/images/` stores local images and placeholder assets.
+- `assets/js/main.js` contains shared navigation behavior.
+- `assets/images/` stores local images in topic-specific folders.
 
 ## Navigation
 
-The header and footer markup are intentionally shared across static pages. Copy the navigation structure from `index.html` or `pages/device.html` when creating a new page, then adjust relative links:
+The header and footer markup are intentionally shared across static pages. Copy the navigation structure from `index.html` or `pages/device.html` when creating a new page, then adjust relative links. See `PROJECT_STRUCTURE.md` for the current directory and naming conventions.
 
 - From the root page: `pages/page-name.html`
 - From a page in `pages/`: `../index.html` and `../assets/...`

@@ -89,27 +89,26 @@
     </section>
 
     <!-- Problem and Solution -->
-    <section id="solution" aria-labelledby="solution-title">
-      <header>
-        <p>Cardiac care should not be limited by location.</p>
-        <h2 id="solution-title">A better connection between cardiac monitoring and care.</h2>
-      </header>
-      <div>
-        <article>
-          <h3>The problem</h3>
-          <p>Access to cardiac monitoring can be limited, especially when symptoms happen away from a clinic. Waiting for an ECG may delay diagnosis and follow-up.</p>
-          <p>Patients need a practical way to record cardiac activity on the go, while healthcare providers need a better connection to the information that supports care decisions.</p>
-        </article>
-        <article>
-          <h3>Our solution</h3>
-          <p>Heart-O-Care is being built as a connected cardiac care platform that brings hardware and software into one workflow.</p>
-          <ul>
-            <li>A portable ECG device built around ESP32 and AD8232.</li>
-            <li>Bluetooth connectivity to a mobile application.</li>
-            <li>Desktop software for ECG visualization and reporting.</li>
-            <li>A future path to cloud synchronization and AI-powered ECG insights.</li>
-          </ul>
-        </article>
+    <section id="solution" class="problem-solution" aria-labelledby="solution-title">
+      <div class="container">
+        <header class="problem-solution__intro">
+          <p class="problem-solution__eyebrow">Why Heart-O-Care exists</p>
+          <h2 id="solution-title">Bringing cardiac monitoring closer to everyday life.</h2>
+        </header>
+        <div class="problem-solution__grid">
+          <article class="card problem-solution__card">
+            <span class="problem-solution__icon problem-solution__icon--challenge" aria-hidden="true">!</span>
+            <p class="problem-solution__label">The Challenge</p>
+            <h3>Cardiac monitoring should not stop at the hospital.</h3>
+            <p>Many people experience symptoms outside clinical environments, while access to timely cardiac monitoring can be limited. Traditional ECG testing often depends on location, equipment availability, and scheduled appointments, making continuous observation difficult.</p>
+          </article>
+          <article class="card problem-solution__card">
+            <span class="problem-solution__icon problem-solution__icon--solution" aria-hidden="true">+</span>
+            <p class="problem-solution__label">Our Solution</p>
+            <h3>Heart-O-Care connects people, devices, and care.</h3>
+            <p>Heart-O-Care combines a portable ECG device, Bluetooth connectivity, a mobile application, desktop software, and future AI-assisted analysis into one connected ecosystem designed to make cardiac monitoring more accessible.</p>
+          </article>
+        </div>
       </div>
     </section>
 

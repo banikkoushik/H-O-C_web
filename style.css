@@ -665,6 +665,86 @@ section {
   }
 }
 
+/* Problem and solution */
+.problem-solution {
+  background: linear-gradient(180deg, var(--color-background), color-mix(in srgb, var(--color-surface) 38%, var(--color-background)));
+}
+
+.problem-solution__intro {
+  margin-block-end: clamp(2rem, 5vw, 3.5rem);
+  max-width: 45rem;
+}
+
+.problem-solution__eyebrow,
+.problem-solution__label {
+  color: var(--color-primary);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.problem-solution__eyebrow {
+  margin-block-end: var(--space-2);
+}
+
+.problem-solution__grid {
+  align-items: stretch;
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.problem-solution__card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  transition: border-color var(--transition-navigation), box-shadow var(--transition-navigation), transform var(--transition-navigation);
+}
+
+.problem-solution__card:hover {
+  border-color: color-mix(in srgb, var(--color-primary) 65%, var(--color-border));
+  box-shadow: 0 18px 36px color-mix(in srgb, var(--color-background) 38%, transparent);
+  transform: translateY(-0.25rem);
+}
+
+.problem-solution__icon {
+  align-items: center;
+  background-color: color-mix(in srgb, var(--color-primary) 16%, var(--color-background));
+  border: 1px solid color-mix(in srgb, var(--color-primary) 65%, var(--color-border));
+  border-radius: 999px;
+  color: var(--color-primary);
+  display: inline-flex;
+  font-size: 1.25rem;
+  font-weight: 700;
+  height: 2.75rem;
+  justify-content: center;
+  margin-block-end: var(--space-3);
+  width: 2.75rem;
+}
+
+.problem-solution__icon--solution {
+  background-color: color-mix(in srgb, var(--color-accent) 14%, var(--color-background));
+  border-color: color-mix(in srgb, var(--color-accent) 62%, var(--color-border));
+  color: var(--color-accent);
+}
+
+.problem-solution__label {
+  margin-block-end: var(--space-1);
+}
+
+.problem-solution__card h3 {
+  font-size: clamp(1.4rem, 2.5vw, 1.75rem);
+  max-width: 22rem;
+}
+
+@media (max-width: 47.9375rem) {
+  .problem-solution__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Buttons */
 .button,
 .button--primary,

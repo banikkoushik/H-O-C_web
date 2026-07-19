@@ -1355,3 +1355,370 @@ button:disabled:hover {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Pocket ECG Device product page */
+.product-page {
+  background-color: var(--color-background);
+}
+
+.product-page__eyebrow {
+  color: var(--color-primary);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-block-end: var(--space-2);
+  text-transform: uppercase;
+}
+
+.product-hero {
+  background:
+    radial-gradient(circle at 76% 40%, color-mix(in srgb, var(--color-primary) 17%, transparent), transparent 30rem),
+    linear-gradient(120deg, var(--color-background), color-mix(in srgb, var(--color-surface) 60%, var(--color-background)));
+  overflow: hidden;
+}
+
+.product-hero__layout {
+  align-items: center;
+  display: grid;
+  gap: clamp(3rem, 7vw, 6rem);
+  grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.8fr);
+  min-height: calc(100svh - 4.75rem);
+}
+
+.product-hero__copy {
+  max-width: 42rem;
+}
+
+.product-hero h1 {
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  letter-spacing: -0.055em;
+}
+
+.product-hero__subtitle {
+  color: var(--color-text-primary);
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
+  font-weight: 700;
+  margin-block-end: var(--space-2);
+}
+
+.product-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-block-start: var(--space-4);
+}
+
+.device-showcase {
+  align-items: center;
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--color-border) 26%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--color-border) 26%, transparent) 1px, transparent 1px);
+  background-size: 2rem 2rem;
+  border: 1px solid color-mix(in srgb, var(--color-border) 78%, transparent);
+  border-radius: 1.5rem;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  min-height: clamp(22rem, 36vw, 30rem);
+  overflow: hidden;
+  position: relative;
+}
+
+.device-showcase::before {
+  background: radial-gradient(circle, color-mix(in srgb, var(--color-primary) 26%, transparent), transparent 65%);
+  content: "";
+  inset: 10%;
+  position: absolute;
+}
+
+.device-showcase__body {
+  background-color: color-mix(in srgb, var(--color-surface) 90%, var(--color-background));
+  border: 1px solid color-mix(in srgb, var(--color-primary) 62%, var(--color-border));
+  border-radius: 1.25rem;
+  box-shadow: 0 20px 48px color-mix(in srgb, var(--color-background) 45%, transparent);
+  height: clamp(10rem, 17vw, 13rem);
+  position: relative;
+  transform: rotate(-8deg);
+  width: clamp(15rem, 25vw, 20rem);
+  z-index: 1;
+}
+
+.device-showcase__screen {
+  background-color: color-mix(in srgb, var(--color-primary) 14%, var(--color-background));
+  border: 1px solid color-mix(in srgb, var(--color-primary) 70%, var(--color-border));
+  border-radius: 0.75rem;
+  height: 38%;
+  left: 13%;
+  position: absolute;
+  top: 18%;
+  width: 74%;
+}
+
+.device-showcase__screen::after {
+  border-top: 2px solid var(--color-primary);
+  content: "";
+  left: 10%;
+  position: absolute;
+  top: 50%;
+  transform: skewX(-30deg);
+  width: 78%;
+}
+
+.device-showcase__lead {
+  border-top: 2px solid color-mix(in srgb, var(--color-primary) 70%, transparent);
+  position: absolute;
+  top: 74%;
+  width: 32%;
+}
+
+.device-showcase__lead--left {
+  left: -22%;
+  transform: rotate(26deg);
+}
+
+.device-showcase__lead--right {
+  right: -22%;
+  transform: rotate(-26deg);
+}
+
+.product-section-intro {
+  margin-block-end: clamp(2rem, 5vw, 3.5rem);
+  max-width: 48rem;
+}
+
+.product-purpose {
+  background-color: color-mix(in srgb, var(--color-surface) 34%, var(--color-background));
+}
+
+.product-purpose__layout {
+  align-items: start;
+  display: grid;
+  gap: clamp(2rem, 6vw, 5rem);
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+}
+
+.product-purpose__content {
+  border-left: 2px solid var(--color-primary);
+  padding-inline-start: clamp(1.25rem, 3vw, 2rem);
+}
+
+.product-purpose__content h3 {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  max-width: 23rem;
+}
+
+.product-purpose__list {
+  display: grid;
+  gap: var(--space-1);
+  list-style: none;
+  margin-block-start: var(--space-3);
+  padding: 0;
+}
+
+.product-purpose__list li {
+  align-items: flex-start;
+  display: flex;
+  font-size: 0.9375rem;
+  gap: var(--space-1);
+  margin: 0;
+}
+
+.product-purpose__list li::before {
+  background-color: var(--color-accent);
+  border-radius: 999px;
+  content: "";
+  flex: 0 0 auto;
+  height: 0.5rem;
+  margin-block-start: 0.45rem;
+  width: 0.5rem;
+}
+
+.product-features {
+  background-color: var(--color-background);
+}
+
+.product-feature-grid {
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  list-style: none;
+  padding: 0;
+}
+
+.product-feature-grid li {
+  margin: 0;
+}
+
+.product-feature-card {
+  height: 100%;
+  min-height: 12rem;
+  padding: var(--space-3);
+}
+
+.product-feature-card h3 {
+  font-size: 1.125rem;
+}
+
+.product-feature-card p {
+  font-size: 0.9375rem;
+}
+
+.technical-overview {
+  background: linear-gradient(180deg, color-mix(in srgb, var(--color-surface) 35%, var(--color-background)), var(--color-background));
+}
+
+.technical-overview__table-wrapper {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  overflow-x: auto;
+}
+
+.technical-overview table {
+  border-collapse: collapse;
+  min-width: 32rem;
+  width: 100%;
+}
+
+.technical-overview caption {
+  color: var(--color-text-primary);
+  font-size: 1rem;
+  font-weight: 700;
+  padding: var(--space-3);
+  text-align: left;
+}
+
+.technical-overview th,
+.technical-overview td {
+  border-top: 1px solid var(--color-border);
+  padding: 0.875rem var(--space-3);
+  text-align: left;
+}
+
+.technical-overview thead th {
+  background-color: color-mix(in srgb, var(--color-surface) 82%, var(--color-background));
+  color: var(--color-text-primary);
+}
+
+.technical-overview tbody th {
+  color: var(--color-text-primary);
+  font-weight: 700;
+}
+
+.technical-overview td {
+  color: var(--color-text-secondary);
+}
+
+.product-roadmap-section {
+  background-color: var(--color-background);
+}
+
+.product-roadmap {
+  display: grid;
+  gap: clamp(2.5rem, 5vw, 4rem);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  list-style: none;
+  padding: 0;
+}
+
+.product-roadmap li {
+  align-items: center;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  color: var(--color-text-primary);
+  display: flex;
+  font-size: 0.875rem;
+  font-weight: 700;
+  justify-content: center;
+  margin: 0;
+  min-height: 5.5rem;
+  padding: var(--space-2);
+  position: relative;
+  text-align: center;
+}
+
+.product-roadmap li:not(:last-child)::after {
+  border-right: 1px solid var(--color-primary);
+  border-top: 1px solid var(--color-primary);
+  content: "";
+  height: 0.5rem;
+  position: absolute;
+  right: calc(0px - var(--space-3));
+  top: calc(50% - 0.25rem);
+  transform: rotate(45deg);
+  width: 0.5rem;
+}
+
+.product-cta {
+  background:
+    radial-gradient(circle at 50% 0, color-mix(in srgb, var(--color-primary) 18%, transparent), transparent 28rem),
+    color-mix(in srgb, var(--color-surface) 56%, var(--color-background));
+  padding-block: clamp(4rem, 8vw, 6rem);
+  text-align: center;
+}
+
+.product-cta h2 {
+  font-size: clamp(2rem, 4vw, 3.25rem);
+}
+
+@media (max-width: 63.9375rem) {
+  .product-hero__layout,
+  .product-purpose__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .product-hero__layout {
+    min-height: auto;
+  }
+
+  .device-showcase {
+    margin-inline: auto;
+    max-width: 34rem;
+    width: 100%;
+  }
+
+  .product-feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .product-roadmap {
+    grid-template-columns: 1fr;
+    max-width: 34rem;
+  }
+
+  .product-roadmap li:not(:last-child)::after {
+    border-bottom: 1px solid var(--color-primary);
+    border-right: 1px solid var(--color-primary);
+    border-top: 0;
+    bottom: calc(0px - var(--space-3));
+    left: calc(50% - 0.25rem);
+    right: auto;
+    top: auto;
+    transform: rotate(45deg);
+  }
+}
+
+@media (max-width: 47.9375rem) {
+  .product-hero__layout {
+    padding-block: clamp(3.5rem, 12vw, 5rem);
+  }
+
+  .product-hero__actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .product-hero__actions a {
+    width: 100%;
+  }
+
+  .product-feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .technical-overview th,
+  .technical-overview td {
+    padding: 0.75rem var(--space-2);
+  }
+}

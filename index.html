@@ -113,31 +113,46 @@
     </section>
 
     <!-- Ecosystem -->
-    <section id="ecosystem" aria-labelledby="ecosystem-title">
-      <h2 id="ecosystem-title">Heart-O-Care Ecosystem</h2>
-      <ol aria-label="Heart-O-Care ecosystem flow">
-        <li>
-          Pocket ECG Device
-          <span aria-hidden="true">↓</span>
-        </li>
-        <li>
-          Bluetooth (ESP32)
-          <span aria-hidden="true">↓</span>
-        </li>
-        <li>
-          Mobile App
-          <span aria-hidden="true">↓</span>
-        </li>
-        <li>
-          Desktop Software
-          <span aria-hidden="true">↓</span>
-        </li>
-        <li>
-          Future Cloud &amp; AI
-          <span aria-hidden="true">↓</span>
-        </li>
-        <li>Healthcare Professionals</li>
-      </ol>
+    <section id="ecosystem" class="ecosystem" aria-labelledby="ecosystem-title">
+      <div class="container">
+        <header class="ecosystem__intro">
+          <p class="ecosystem__eyebrow">One Connected Platform</p>
+          <h2 id="ecosystem-title">Everything works together.</h2>
+          <p>Heart-O-Care combines portable ECG hardware, Bluetooth communication, mobile software, desktop visualization, and future cloud intelligence into one connected cardiac care ecosystem.</p>
+        </header>
+        <ol class="ecosystem-flow">
+          <li class="card ecosystem-card ecosystem-card--device">
+            <span class="ecosystem-card__icon" aria-hidden="true">ECG</span>
+            <h3>Portable ECG Device</h3>
+            <p>Portable ECG acquisition using ESP32 and AD8232.</p>
+          </li>
+          <li class="card ecosystem-card ecosystem-card--bluetooth">
+            <span class="ecosystem-card__icon" aria-hidden="true">BT</span>
+            <h3>Bluetooth</h3>
+            <p>Secure wireless communication between hardware and software.</p>
+          </li>
+          <li class="card ecosystem-card ecosystem-card--mobile">
+            <span class="ecosystem-card__icon" aria-hidden="true">APP</span>
+            <h3>Mobile App</h3>
+            <p>Live monitoring and ECG recording.</p>
+          </li>
+          <li class="card ecosystem-card ecosystem-card--desktop">
+            <span class="ecosystem-card__icon" aria-hidden="true">DESK</span>
+            <h3>Desktop Software</h3>
+            <p>Visualization, reporting and patient management.</p>
+          </li>
+          <li class="card ecosystem-card ecosystem-card--cloud">
+            <span class="ecosystem-card__icon ecosystem-card__icon--accent" aria-hidden="true">AI</span>
+            <h3>Future Cloud &amp; AI</h3>
+            <p>Future synchronization and intelligent ECG assistance.</p>
+          </li>
+          <li class="card ecosystem-card ecosystem-card--professionals">
+            <span class="ecosystem-card__icon ecosystem-card__icon--accent" aria-hidden="true">+</span>
+            <h3>Healthcare Professionals</h3>
+            <p>Review reports and support informed care decisions.</p>
+          </li>
+        </ol>
+      </div>
     </section>
 
     <!-- How It Works -->

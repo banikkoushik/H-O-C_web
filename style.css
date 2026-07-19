@@ -745,6 +745,187 @@ section {
   }
 }
 
+/* Ecosystem */
+.ecosystem {
+  background-color: var(--color-background);
+}
+
+.ecosystem__intro {
+  margin-block-end: clamp(2.5rem, 6vw, 4rem);
+  max-width: 48rem;
+}
+
+.ecosystem__eyebrow {
+  color: var(--color-primary);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-block-end: var(--space-2);
+  text-transform: uppercase;
+}
+
+.ecosystem__intro > p:last-child {
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  max-width: 44rem;
+}
+
+.ecosystem-flow {
+  --ecosystem-flow-gap: clamp(1.5rem, 3.5vw, 3rem);
+
+  display: grid;
+  gap: var(--ecosystem-flow-gap);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  list-style: none;
+  padding: 0;
+  position: relative;
+}
+
+.ecosystem-card {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 13.5rem;
+  padding: var(--space-3);
+  position: relative;
+  transition: border-color var(--transition-navigation), box-shadow var(--transition-navigation), transform var(--transition-navigation);
+}
+
+.ecosystem-card:hover {
+  border-color: color-mix(in srgb, var(--color-primary) 65%, var(--color-border));
+  box-shadow: 0 18px 36px color-mix(in srgb, var(--color-background) 38%, transparent);
+  transform: translateY(-0.25rem);
+}
+
+.ecosystem-card__icon {
+  align-items: center;
+  background-color: color-mix(in srgb, var(--color-primary) 16%, var(--color-background));
+  border: 1px solid color-mix(in srgb, var(--color-primary) 65%, var(--color-border));
+  border-radius: 0.5rem;
+  color: var(--color-primary);
+  display: inline-flex;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  height: 2.5rem;
+  justify-content: center;
+  letter-spacing: 0.05em;
+  margin-block-end: var(--space-3);
+  min-width: 2.5rem;
+  padding-inline: 0.5rem;
+}
+
+.ecosystem-card__icon--accent {
+  background-color: color-mix(in srgb, var(--color-accent) 14%, var(--color-background));
+  border-color: color-mix(in srgb, var(--color-accent) 62%, var(--color-border));
+  color: var(--color-accent);
+}
+
+.ecosystem-card h3 {
+  font-size: 1.0625rem;
+  margin-block-end: var(--space-1);
+}
+
+.ecosystem-card p {
+  font-size: 0.875rem;
+  line-height: 1.55;
+}
+
+.ecosystem-card--cloud {
+  grid-column: 4;
+  grid-row: 2;
+}
+
+.ecosystem-card--professionals {
+  grid-column: 4;
+  grid-row: 3;
+}
+
+@media (min-width: 60rem) {
+  .ecosystem-card--device::after,
+  .ecosystem-card--bluetooth::after,
+  .ecosystem-card--mobile::after {
+    background-color: color-mix(in srgb, var(--color-primary) 72%, transparent);
+    content: "";
+    height: 1px;
+    position: absolute;
+    right: calc(-1 * var(--ecosystem-flow-gap));
+    top: 50%;
+    width: var(--ecosystem-flow-gap);
+  }
+
+  .ecosystem-card--device::before,
+  .ecosystem-card--bluetooth::before,
+  .ecosystem-card--mobile::before {
+    border-right: 1px solid var(--color-primary);
+    border-top: 1px solid var(--color-primary);
+    content: "";
+    height: 0.45rem;
+    position: absolute;
+    right: calc((-1 * var(--ecosystem-flow-gap)) + 0.25rem);
+    top: calc(50% - 0.2rem);
+    transform: rotate(45deg);
+    width: 0.45rem;
+  }
+
+  .ecosystem-card--desktop::after,
+  .ecosystem-card--cloud::after {
+    border-left: 1px solid color-mix(in srgb, var(--color-primary) 72%, transparent);
+    content: "";
+    height: var(--ecosystem-flow-gap);
+    left: 50%;
+    position: absolute;
+    top: 100%;
+  }
+
+  .ecosystem-card--desktop::before,
+  .ecosystem-card--cloud::before {
+    border-bottom: 1px solid var(--color-primary);
+    border-right: 1px solid var(--color-primary);
+    content: "";
+    height: 0.45rem;
+    left: calc(50% - 0.25rem);
+    position: absolute;
+    top: calc(100% + var(--ecosystem-flow-gap) - 0.5rem);
+    transform: rotate(45deg);
+    width: 0.45rem;
+  }
+}
+
+@media (max-width: 59.9375rem) {
+  .ecosystem-flow {
+    gap: clamp(3.5rem, 9vw, 5rem);
+    grid-template-columns: 1fr;
+    max-width: 34rem;
+  }
+
+  .ecosystem-card--cloud,
+  .ecosystem-card--professionals {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .ecosystem-card:not(.ecosystem-card--professionals)::after {
+    border-left: 1px solid color-mix(in srgb, var(--color-primary) 72%, transparent);
+    content: "";
+    height: clamp(3.5rem, 9vw, 5rem);
+    left: 50%;
+    position: absolute;
+    top: 100%;
+  }
+
+  .ecosystem-card:not(.ecosystem-card--professionals)::before {
+    border-bottom: 1px solid var(--color-primary);
+    border-right: 1px solid var(--color-primary);
+    content: "";
+    height: 0.45rem;
+    left: calc(50% - 0.25rem);
+    position: absolute;
+    top: calc(100% + clamp(3.5rem, 9vw, 5rem) - 0.5rem);
+    transform: rotate(45deg);
+    width: 0.45rem;
+  }
+}
+
 /* Buttons */
 .button,
 .button--primary,
